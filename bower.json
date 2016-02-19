@@ -1,0 +1,21 @@
+{
+  "name": "430-train",
+  "description": "answer to a question over time",
+  "main": "app.js",
+  "authors": [
+    "Blake Grotewold <bgrotewold@ciswired.com>"
+  ],
+  "license": "UNLICENSED",
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
