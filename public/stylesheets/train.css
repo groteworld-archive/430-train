@@ -1,14 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Lora);
 
 body {
     background-color: #1C3B54;
     text-align: center;
     min-width: 500px;
-    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #19C7BA;
 }
 
-h1, h3 {
-    color: #19C7BA;
+h1 {
+    font-family: "Lora", serif;
+    font-size: 64px;
 }
 
 .input-group {
