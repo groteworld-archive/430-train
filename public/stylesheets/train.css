@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+    background-color: #1C3B54;
+    text-align: center;
+    min-width: 500px;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+h1, h3 {
+    color: #19C7BA;
+}
+
+.input-group {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.form-control {
+    border-color: #13AB9F;
+}
+
+.input-group-addon {
+    background-color: #19C7BA;
+    border-color: #13AB9F;
+    color: #ffffff;
+}
+
+.d3-tip {
+    color: #ffffff;
+}

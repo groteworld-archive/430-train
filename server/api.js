@@ -57,13 +57,13 @@
     };
 
     exports.postTimes = function(req, res) {
-        console.log(req);
         var rtn = JSON.parse(fs.readFileSync('./server/data.json', 'utf8'));
         if (bcrypt.compareSync(req.body.password, process.env.TRAIN_PASSWORD_HASH)) {
             var now = new Date();
             var timeInt = parseInt(dateFormat(now, 'HMM'));
+            // TODO: remove `true`, which is there for demo purposes.
             // if after 3:45PM and before 5:15PM
-            if (timeInt > 1545 && timeInt < 1715) {
+            if (true || timeInt > 1545 && timeInt < 1715) {
                 rtn.times[dateFormat(now, 'yyyymmdd')] = dateFormat(now, 'h:MM:ss TT');
 
                 fs.writeFileSync('./server/data.json', JSON.stringify(rtn));

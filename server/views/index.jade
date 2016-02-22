@@ -3,8 +3,25 @@ html
     head
         title 4:30 train?
 
+        link(rel="stylesheet", href="components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="components/bootstrap/dist/css/bootstrap-theme.min.css")
+        link(rel="stylesheet", href="components/font-awesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="stylesheets/train.css")
     body
-        h1 Hello World
+        #wrapper
+            h1 4:30 Train?
+            h3 Last 30 days of train times...
+            #chart
 
+            form
+                h3 Hear the train whistle? Record the time!
+                .input-group
+                    .input-group-addon.btn(onclick="showPass()"): i.fa.fa-eye
+                    input.line-input.form-control.password(type="password", placeholder="Password", name="password")
+                    .input-group-addon.btn(onclick="formPost()") Submit
+
+        script(type="text/javascript", src="components/d3/d3.min.js")
+        script(type="text/javascript", src="components/d3-tip/index.js")
+        script(type="text/javascript", src="components/DateJS/build/production/date.min.js")
+        script(type="text/javascript", src="components/jquery/dist/jquery.min.js")
         script(type="text/javascript", src="javascripts/train.js")

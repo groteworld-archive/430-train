@@ -3,7 +3,7 @@
   "description": "answer to a question over time",
   "main": "app.js",
   "authors": [
-    "Blake Grotewold <bgrotewold@ciswired.com>"
+    "Blake Grotewold <blake.grotewold@gmail.com>"
   ],
   "license": "UNLICENSED",
   "moduleType": [],
@@ -19,6 +19,9 @@
   ],
   "dependencies": {
     "d3": "^3.5.16",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "DateJS": "datejs#^1.0.0-rc3",
+    "d3-tip": "^0.6.7",
+    "font-awesome": "^4.5.0"
   }
 }
