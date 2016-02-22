@@ -68,19 +68,19 @@
 
                 fs.writeFileSync('./server/data.json', JSON.stringify(rtn));
 
-                // exec('git add ./server/data.json', function(error) {
-                //     if (!error) {
-                //         exec('git commit -m ":train: There was a train today. :train:"', function(err) {
-                //             if (!err) {
-                //                 exec('git push https://groteworld:'+process.env.GITHUB_PAT+'@github.com/groteworld/430-train.git master',function(er){
-                //                     if (!er) {
-                //                         console.log('success');
-                //                     }
-                //                 });
-                //             }
-                //         });
-                //     }
-                // });
+                exec('git add ./server/data.json', function(error) {
+                    if (!error) {
+                        exec('git commit -m ":train: Train Time! :train:"', function(err) {
+                            if (!err) {
+                                exec('git push https://groteworld:'+process.env.GITHUB_PAT+'@github.com/groteworld/430-train.git master',function(er){
+                                    if (!er) {
+                                        console.log('success');
+                                    }
+                                });
+                            }
+                        });
+                    }
+                });
 
                 res.json(rtn);
             } else {
