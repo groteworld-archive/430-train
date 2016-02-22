@@ -11,10 +11,16 @@
         res.json({version: pkg.version});
     };
 
+    exports.getDistances = function(req, res) {
+        var data = JSON.parse(fs.readFileSync('./server/data.json', 'utf8'));
+
+        res.json(data.distances);
+    };
+
     exports.getTimes = function(req, res) {
         var data = JSON.parse(fs.readFileSync('./server/data.json', 'utf8'));
 
-        res.json(data);
+        res.json(data.times);
     };
 
     exports.getTime = function(req, res) {
@@ -35,8 +41,6 @@
         var data = JSON.parse(fs.readFileSync('./server/data.json', 'utf8'));
 
         try {
-            if (!(data.times[req.params.fromTime]) || !(data.times[req.params.toTime]))
-                throw Error;
 
             var rtn = {};
 
@@ -53,12 +57,13 @@
     };
 
     exports.postTimes = function(req, res) {
+        console.log(req);
         var rtn = JSON.parse(fs.readFileSync('./server/data.json', 'utf8'));
         if (bcrypt.compareSync(req.body.password, process.env.TRAIN_PASSWORD_HASH)) {
             var now = new Date();
             var timeInt = parseInt(dateFormat(now, 'HMM'));
-            // if after 3:00PM and before 6:00PM
-            if (timeInt > 1500 && timeInt < 1800) {
+            // if after 3:45PM and before 5:15PM
+            if (timeInt > 1545 && timeInt < 1715) {
                 rtn.times[dateFormat(now, 'yyyymmdd')] = dateFormat(now, 'h:MM:ss TT');
 
                 fs.writeFileSync('./server/data.json', JSON.stringify(rtn));

@@ -12,6 +12,7 @@
 
     // API Routes
     router.get('/api/version', api.getVersion);
+    router.get('/api/distances/', api.getDistances);
     router.get('/api/times/', api.getTimes);
     router.get('/api/times/:time', api.getTime);
     router.get('/api/times/:fromTime/:toTime', api.getTimeRange);
