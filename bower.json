@@ -6,16 +6,19 @@
     "Blake Grotewold <bgrotewold@ciswired.com>"
   ],
   "license": "UNLICENSED",
-  "moduleType": [
-    "node"
-  ],
-  "homepage": "",
+  "moduleType": [],
+  "homepage": "https://github.com/groteworld/430-train",
   "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "public/components"
+  ],
+  "dependencies": {
+    "d3": "^3.5.16",
+    "bootstrap": "^3.3.6"
+  }
 }
